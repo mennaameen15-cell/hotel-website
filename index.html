@@ -22,6 +22,7 @@
         <li><a href="#features">Features</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#news">News</a></li>
+         <li><a href="#contact us">Contact Us</a></li>
       </ul>
     </nav>
   </header>
@@ -29,11 +30,11 @@
   <section class="hero">
     <div class="hero-text">
       <h2 id="typing"></h2>
-      <p>Enjoy your stay with us and feel the luxury in every deatail.</p>
-      <a href="rooms.html" class="btn">Book Now</a>
+      <p>Enjoy your stay with us and feel the luxury in every detail.</p>
+      <button class="btn book-btn">Book Now</button>
     </div>
   </section>
-  <section class="about" id="about">
+  <section class="about fade-in" id="about">
     <div  class="about-header">
     <h2>About Our Hotel</h2>
     <p>Discover what makes us special</p>
@@ -53,8 +54,7 @@
 </div>
     </div>
   </section>
-  <script src="script.js"></script>
-<section id="rooms" class="rooms">
+<section id="rooms fade-in" class="rooms">
   <div class="section-header">
     <h2>Our Rooms</h2>
     <p>Comfort,Elegance, and Luxury</p>
@@ -64,23 +64,23 @@
       <img src="images/saved_pictures/single room . jpg.jpg" alt="">
       <h3>Bed Room</h3>
       <p>Relax in our cozy bed room with soft lighting and peaceful design.</p>
-      <button class="btn">Book Now</button>
+      <button class="btn book-btn">Book Now</button>
     </div>
     <div class="room-card">
       <img src="images/saved_pictures/double room. jpg.jpg" alt="Double Room">
       <h3>Double Room</h3>
       <p>Spacious double room perfect for couples with modern furniture.</p>
-      <button class="btn">Book Now</button>
+      <button class="btn book-btn">Book Now</button>
     </div>
     <div class="room-card">
       <img src="images/saved_pictures/suite. jpg.jpg" alt="Suite Rooms">
       <h3>Suite Room</h3>
       <p>Enjoy our luxurious suite with private balcony and living area. </p>
-      <button class="btn">Book Now</button>
+      <button class="btn book-btn">Book Now</button>
     </div>
   </div>
 </section>
-<section id="features" class="features">
+<section id="features fade-in" class="features">
   <div class="section-header">
     <h2>Our Features</h2>
     <p>Explore what makes our hotel special</p>
@@ -106,7 +106,7 @@
     </div>
   </div>
 </section>
-<section id="menu" class="menu">
+<section id="menu fade-in" class="menu">
   <div class="section-header">
     <h2>Our Menu</h2>
     <p>Delicious food and refreshing drinks</p>
@@ -171,7 +171,7 @@
   </div>
 </section>
 
-<section id="news" class="news">
+<section id="news fade-in" class="news">
   <div class="section-header">
     <h2>Latest News</h2>
     <p>Stay updated with our latest events and offers</p>
@@ -201,6 +201,59 @@
   </div>
 </section>
 
+<section id="contact fade-in" class="contact">
+  <div class="section-header">
+    <h2>Contact Us</h2>
+    <p>Get in touch for bookings or inquiries</p>
+  </div>
+  
+  <div class="contact-container">
+    <form id="contactForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Our Address</h3>
+      <p>123 Luxury St, City, Country</p>
+      <h3>Email</h3>
+      <p>info@luxuryhotel.com</p>
+      <h3>Phone</h3>
+      <p>+123 456 7890</p>
+    </div>
+  </div>
+</section>
+
+
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Book Your Stay</h2>
+
+    <form id="bookingForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+
+      <label>Check In</label>
+      <input type="date" required>
+
+      <label>Check Out</label>
+      <input type="date" required>
+
+      <select required>
+        <option value="">Select Room Type</option>
+        <option>Single Room</option>
+        <option>Double Room</option>
+        <option>Luxury Suite</option>
+      </select>
+
+      <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
 
