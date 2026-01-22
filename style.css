@@ -7,9 +7,6 @@ body {
 
 /* Header */
 
-
-
-
 header {
   position: fixed; /* هيثبت الشريط */
   top: 0;
@@ -453,16 +450,35 @@ nav a.active {
 @media (max-width: 768px) {
   /* Header */
   header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
+    flex-direction: auto;
+    position: relative;
+  text-align: center;
+    padding:  20px;
   }
   
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
+ nav ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95); 
+        padding: 20px 0;
+        z-index: 1000;
+        list-style: none;
+    }
+
+    nav ul.active {
+        display: flex !important;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1); 
+    }
 
   nav a {
     display: block;
@@ -531,8 +547,23 @@ nav a.active {
 
   /* Section padding */
   .hero, .about, .rooms, .features, .menu, .news {
-    padding-top: 60px;
+    padding:40px 20px !important;
+    text-align: center;
   }
+
+  .img {
+      max-width: 100% !important;
+      height: auto;
+      border-radius: 10px;
+  }
+  .nav ul.active {
+    display: flex !important;
 }
-
-
+.menu-toggle {
+    display: block !important;
+    cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+}
+}
